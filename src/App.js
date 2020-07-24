@@ -40,10 +40,11 @@ const App = () => {
     axios.post('https://reqres.in/api/users', newOrder)
       .then(res => {
         setOrder([res.data, ...order])
+        console.log(res.data)
         setFormValues(initialFormValues)
       })
       .catch(err => {
-        debugger
+        return (<h3>There was an error submitting your order. Please try again.</h3>)
       })
   }
 
@@ -87,7 +88,10 @@ const App = () => {
     //   })
     setFormValues({
       ...formValues,
-      [name]: isChecked,
+      toppings: {
+        ...formValues.toppings,
+        [name]: isChecked, // not an array
+      }
     })
   }
 
@@ -95,9 +99,9 @@ const App = () => {
     const newOrder = {
       name: formValues.name.trim(),
       // instructions: formValues.instructions.trim(),
-      // size: formValues.size.trim(),
+      size: formValues.size.trim(),
       // toppings: formValues.civil.trim(),
-      // toppings: Object.keys(formValues.toppings).filter(hb => formValues.toppings[hb]),
+      toppings: Object.keys(formValues.toppings).filter(hb => formValues.toppings[hb]),
     }
     postNewOrder(newOrder)
   }
