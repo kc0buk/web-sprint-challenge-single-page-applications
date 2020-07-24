@@ -31,8 +31,16 @@ Commit your code regularly and meaningfully. This helps both you (in case you ev
 Demonstrate your understanding of this week's concepts by answering the following free-form questions. Edit this document to include your answers after each question.
 
 1. In 1-2 sentences, explain what React's `useRouteMatch` hook is used for.
-1. How would you explain form validation to someone who has never programmed before?
-1. In 1-2 sentences, define end to end testing.
+
+    The useRouteMatch hook allows developers to add nested routes into their application, enabling a change to a single parameter in the URL, without having to specify a hard-coded URL for each iteration.
+
+2. How would you explain form validation to someone who has never programmed before?
+
+    Form validation is the process of checking the incoming data that has been entered into a form to confirm the data meets the minimum set of requirements. For example, required fields are completed, structured data (like an email address) have all the required pieces and are in the correct format, and there are no extra characters such as leading or trailing spaces or disallowed characters, like special characters.
+
+3. In 1-2 sentences, define end to end testing.
+
+    End-to-end testing is the process of simulating what a real user would go through, as they navigated through an application. End-to-end testing generally involves testing each component and link on a page to confirm everything works as expected, links go where they're expected to go, and there are no bugs in the code. 
 
 ## Instructions
 
@@ -92,6 +100,6 @@ One of your goals is to return a database record of the order - for this you'll 
 
 Follow these steps for completing your project.
 
-- [ ] Submit a pull request to merge `<firstName-lastName>` branch into the `main` branch (student's repo). **Please don't merge your own pull request**
-- [ ] Add your team lead as a reviewer on the pull request
+- [x] Submit a pull request to merge `<firstName-lastName>` branch into the `main` branch (student's repo). **Please don't merge your own pull request** (https://github.com/kc0buk/web-sprint-challenge-single-page-applications/pull/1)
+- [x] Add your team lead as a reviewer on the pull request
 - [ ] Your team lead will count the project as complete after receiving your pull request
